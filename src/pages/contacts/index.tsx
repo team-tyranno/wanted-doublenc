@@ -56,20 +56,13 @@ const Contacts = () => {
   }, []);
 
   return (
-    <>
-      <S.Nav />
-      <S.Container>
-        <CustomerServiceInfo />
-        <ContentsDivider />
-        <QaTypeSelector
-          qaTypeList={qaTypes.qaTypes}
-          selected={chosenType}
-          onClick={setChosenType}
-        />
-        <ContentsDivider />
-        <Faq qaList={qaLists[chosenType]} />
-      </S.Container>
-    </>
+    <S.Container>
+      <CustomerServiceInfo />
+      <ContentsDivider />
+      <QaTypeSelector qaTypeList={qaTypes.qaTypes} selected={chosenType} onClick={setChosenType} />
+      <ContentsDivider />
+      <Faq qaList={qaLists[chosenType]} />
+    </S.Container>
   );
 };
 
