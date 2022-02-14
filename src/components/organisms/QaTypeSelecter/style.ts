@@ -4,44 +4,33 @@ export const Container = styled.section`
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   font-size: 14px;
-  font-family: apple sd gothic neo, sans-serif;
+  font-family: Apple SD Gothic Neo, sans-serif;
   color: #333;
   -webkit-box-direction: normal;
   display: block;
   box-sizing: border-box;
   padding: 17px 17px 0px;
   background: #ffffff;
+  border-bottom: 1px solid #c4c4c4;
 `;
 
 export const Title = styled.div`
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  font-family: apple sd gothic neo, sans-serif;
-  color: #333;
-  -webkit-box-direction: normal;
-  box-sizing: border-box;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 15px;
 `;
 
 export const QaTypeButtons = styled.div`
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  font-size: 14px;
-  font-family: apple sd gothic neo, sans-serif;
-  color: #333;
-  -webkit-box-direction: normal;
-  box-sizing: border-box;
   display: flex;
 `;
 
 export const Button = styled.button<{ underLine: boolean }>`
   -webkit-text-size-adjust: 100%;
   -webkit-box-direction: normal;
-  font-family: sans-serif;
+  font-family: Apple SD Gothic Neo, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   font-size: 100%;
-  line-height: 1.15;
   margin: 0;
   overflow: visible;
   text-transform: none;
@@ -58,5 +47,5 @@ export const Button = styled.button<{ underLine: boolean }>`
   border: none;
 
   ${(props) =>
-    props.underLine ? 'color: #f75656;border-bottom: 2px solid #f75656;' : 'color:#333;'}
+    props.underLine ? 'color: #ff5757;border-bottom: 2px solid #ff5757;' : 'color:#333;'}
 `;

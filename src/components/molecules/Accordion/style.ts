@@ -4,7 +4,8 @@ export const Container = styled.div`
   line-height: 1.33;
   -webkit-text-size-adjust: 100%;
   font-size: 15px;
-  font-family: apple sd gothic neo, sans-serif;
+  font-weight: 500;
+  font-family: Apple SD Gothic Neo, sans-serif;
   color: #333;
   -webkit-box-direction: normal;
   box-sizing: border-box;
@@ -13,8 +14,6 @@ export const Container = styled.div`
 
 export const FAQ = styled.button`
   -webkit-box-direction: normal;
-  font-family: sans-serif;
-  font-size: 15px;
   margin: 0;
   overflow: visible;
   text-transform: none;
@@ -30,7 +29,6 @@ export const FAQ = styled.button`
 
 export const QMark = styled.span`
   -webkit-box-direction: normal;
-  font-family: sans-serif;
   text-transform: none;
   cursor: pointer;
   margin-right: 10px;
@@ -39,8 +37,10 @@ export const QMark = styled.span`
 
 export const Question = styled.span`
   -webkit-box-direction: normal;
-  font-family: sans-serif;
   text-transform: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Apple SD Gothic Neo, sans-serif;
   cursor: pointer;
   flex-grow: 1;
   text-align: left;
@@ -54,10 +54,10 @@ export const AnswerBox = styled.div`
 `;
 
 export const AnswerWrap = styled.div`
-  font-family: apple sd gothic neo, sans-serif;
   color: #333;
   -webkit-box-direction: normal;
   box-sizing: border-box;
+  font-family: Apple SD Gothic Neo, sans-serif;
   font-weight: 400;
   transition: all 1.5s ease 0s;
   line-height: 1.4;
