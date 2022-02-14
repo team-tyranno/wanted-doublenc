@@ -9,8 +9,8 @@ export const Caret = ({ isOpen }: ICaretProps) => {
     <S.Container>
       <S.Svg
         data-v-52e7c3af=""
-        width="16"
-        height="9"
+        width="15"
+        height="8"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         isOpen={isOpen}

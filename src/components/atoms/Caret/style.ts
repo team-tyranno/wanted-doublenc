@@ -13,8 +13,6 @@ export const Container = styled.span`
 `;
 
 export const Svg = styled.svg<{ isOpen: boolean }>`
-  width: 16px;
-  height: 9px;
   fill: none;
   align-self: center;
   overflow: hidden;
