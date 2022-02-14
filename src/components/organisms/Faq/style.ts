@@ -11,4 +11,4 @@ export const Container = styled.section`
   box-sizing: border-box;
 `;
 
-export const QaWrap = styled.section``;
+export const QaWrap = styled.div``;

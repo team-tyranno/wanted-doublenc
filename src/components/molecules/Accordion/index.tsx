@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Caret } from 'components';
 
 import * as S from './style';
@@ -6,18 +5,15 @@ import * as S from './style';
 interface IAccordionProps {
   question: string;
   answer: string;
+  isOpen: boolean;
+  onClick: (id: number) => void;
+  id: number;
 }
 
-export const Accordion = ({ question, answer }: IAccordionProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleIsOpen = () => {
-    setIsOpen((c) => !c);
-  };
-
+export const Accordion = ({ question, answer, isOpen, onClick, id }: IAccordionProps) => {
   return (
     <S.Container>
-      <S.FAQ type="button" onClick={toggleIsOpen}>
+      <S.FAQ type="button" onClick={() => onClick(id)}>
         <S.QMark>Q.</S.QMark>
         <S.Question>{question}</S.Question>
         <Caret isOpen={isOpen} />
