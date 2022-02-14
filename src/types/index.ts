@@ -1,1 +1,1 @@
-export type {};
+export type { ICafeProps, IBrandProps, IMenuProps } from './brand';
