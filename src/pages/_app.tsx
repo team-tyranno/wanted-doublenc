@@ -9,12 +9,14 @@ const theme = {
   },
 };
 
-const Container = styled.div`
-  position: absolute;
-  left: 50%;
-  top: 50%;
+const LayoutWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+`;
 
-  transform: translate(-50%, -50%);
+const Container = styled.div`
+  margin: 0 auto;
 
   width: 375px;
   border: 1px solid #eee;
@@ -37,9 +39,11 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <AppLayout>
-          <Component {...pageProps} />
-        </AppLayout>
+        <LayoutWrapper>
+          <AppLayout>
+            <Component {...pageProps} />
+          </AppLayout>
+        </LayoutWrapper>
       </ThemeProvider>
     </>
   );
