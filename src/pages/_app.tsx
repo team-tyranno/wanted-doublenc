@@ -17,7 +17,6 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
 
   width: 375px;
-  height: 812px;
   border: 1px solid #eee;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
