@@ -1,5 +1,4 @@
 interface ICafeProps {
-import { type } from './index';
   id: number;
   name: string;
   discountRate: number;
