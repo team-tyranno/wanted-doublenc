@@ -29,7 +29,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>// 생략</Head>
+        <Head>{/* 생략 */}</Head>
         <body>
           <Main />
           <NextScript />
@@ -38,5 +38,4 @@ class MyDocument extends Document {
     );
   }
 }
-
 export default MyDocument;
