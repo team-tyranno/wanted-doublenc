@@ -1,22 +1,17 @@
 import { useState, useEffect } from 'react';
 import { ContentsDivider, CustomerServiceInfo, Faq, QaTypeSelector } from 'components';
 import { API_END_POINT } from 'commons';
+import { Qa } from 'types';
 import axios from 'axios';
 
 import * as S from './style';
 
-interface Qa {
-  id: number;
-  key: string;
-  name: string;
-}
-
 interface QaLists {
   [key: string]: [
     {
-      id: 1;
-      question: '';
-      answer: '';
+      id: number;
+      question: string;
+      answer: string;
     },
   ];
 }

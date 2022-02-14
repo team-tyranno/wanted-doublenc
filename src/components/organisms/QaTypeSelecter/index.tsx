@@ -1,13 +1,9 @@
+import { Qa } from 'types';
+
 import * as S from './style';
 
-interface QaType {
-  id: number;
-  key: string;
-  name: string;
-}
-
 interface IQaTypeSelectorProps {
-  qaTypeList: QaType[];
+  qaTypeList: Qa[];
   selected: string;
   onClick: (key: string) => void;
 }
