@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { ContentsDivider, Caret } from 'components';
+import { NavBar, ContentsDivider, Caret } from 'components';
 import * as S from './style';
 
 interface SlideMenuProps {
@@ -11,11 +11,14 @@ export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
   const router = useRouter();
   return (
     <S.Container visible={visible}>
-      <S.Navbar>
-        <button type="button" onClick={() => onClick(!visible)}>
-          임시 버튼
-        </button>
-      </S.Navbar>
+      <NavBar
+        leftButton={
+          <S.Button type="button" onClick={() => onClick(!visible)}>
+            <Caret direction="left" />
+          </S.Button>
+        }
+        title="마이페이지"
+      />
       <S.Wrapper>
         <ContentsDivider />
         <S.Button type="button" onClick={() => router.push('/contacts')}>

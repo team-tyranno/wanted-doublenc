@@ -2,7 +2,23 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { getCategoryPath, getCategotyData, getMenuList } from 'utils';
 import { ICafeProps, IPathProps, IMenuProps, ICategoryDetailProps } from 'types';
-import { BrandHeader, BrandLists, MenuSelector } from 'components';
+import { Caret, NavBar, BrandLists, MenuSelector } from 'components';
+
+import styled from 'styled-components';
+
+export const Button = styled.button`
+  -webkit-box-direction: normal;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  box-shadow: none !important;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  display: flex;
+  padding: 19px;
+`;
 
 const CategoryId = ({ datas, menus }: { datas: ICafeProps; menus: Array<IMenuProps> }) => {
   const router = useRouter();
@@ -18,9 +34,15 @@ const CategoryId = ({ datas, menus }: { datas: ICafeProps; menus: Array<IMenuPro
   const parseMenu = menus.flat() as unknown as Array<ICategoryDetailProps>;
   return (
     <>
-      <BrandHeader title={name}>
-        <MenuSelector menuList={parseMenu} selected={selected} onClick={onClick} />
-      </BrandHeader>
+      <NavBar
+        leftButton={
+          <Button type="button" onClick={() => router.back()}>
+            <Caret direction="left" />
+          </Button>
+        }
+        title={name}
+      />
+      <MenuSelector menuList={parseMenu} selected={selected} onClick={onClick} />
       <BrandLists query={id.toString()} datas={conCategory2s} />
     </>
   );
