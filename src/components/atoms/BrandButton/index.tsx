@@ -1,5 +1,6 @@
+import { IBrandProps } from 'types';
 import * as S from './style';
 
-export const BrandButton = () => {
-  <S.Container />;
+export const BrandButton = ({ data }: { data: IBrandProps }) => {
+  return <S.Container />;
 };

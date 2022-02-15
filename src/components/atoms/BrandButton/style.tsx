@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 94px;
-  height: 94px;
+  width: 111px;
+  height: 111px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  background: #fff;
+  background: red;
   border-radius: 5px;
 `;

@@ -1,9 +1,16 @@
 import { getCategoryPath, getCategotyData } from 'utils';
 import { ICafeProps, IPathProps } from 'types';
-import { BrandHeader } from 'components';
+import { BrandHeader, BrandLists } from 'components';
 
 const CategoryId = ({ datas }: { datas: ICafeProps }) => {
-  return <BrandHeader />;
+  const { conCategory2s } = datas;
+  console.log(conCategory2s);
+  return (
+    <>
+      <BrandHeader />
+      <BrandLists datas={conCategory2s} />
+    </>
+  );
 };
 
 export async function getStaticProps({ params }: { params: IPathProps }) {
