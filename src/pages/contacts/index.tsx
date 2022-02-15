@@ -16,7 +16,6 @@ export const Container = styled.div`
   -webkit-box-direction: normal;
   box-sizing: border-box;
   display: flex;
-  margin-top: 59px;
   flex-direction: column;
 `;
 

@@ -9,7 +9,6 @@ export { Item } from 'components/atoms/Item';
 // Molecules
 export { Accordion } from 'components/molecules/Accordion';
 export { BrandLists } from 'components/molecules/BrandLists';
-export { BrandHeader } from 'components/molecules/BrandHeader';
 export { ItemLists } from 'components/molecules/ItemLists';
 
 // Organisms
