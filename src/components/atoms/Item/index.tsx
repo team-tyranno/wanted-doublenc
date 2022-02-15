@@ -1,7 +1,7 @@
 import { IMenuProps } from 'types';
 import * as S from './style';
 
-export const Item = (data: IMenuProps) => {
+export const Item = ({ data }: { data: IMenuProps }) => {
   const { name, originalPrice, minSellingPrice, imageUrl } = data;
 
   const calculateDiscountRate = (price: number, discountPrice: number) => {
