@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ContentsDivider, CustomerServiceInfo, Faq, QaTypeSelector } from 'components';
+import { ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
 import { API_END_POINT } from 'commons';
 import { Qa } from 'types';
 import axios from 'axios';
@@ -42,7 +42,7 @@ export const Navbar = styled.div`
 `;
 
 interface QaLists {
-  [key: string]: [
+  [key: number]: [
     {
       id: number;
       question: string;
@@ -52,11 +52,14 @@ interface QaLists {
 }
 
 const Contacts = () => {
-  const [qaTypes, setQaTypes] = useState({
-    qaTypes: [{ id: 1, key: '', name: '' }],
-  });
+  const [qaTypes, setQaTypes] = useState([
+    {
+      id: 1,
+      name: '',
+    },
+  ]);
   const [qaLists, setQaLists] = useState<QaLists>({
-    buy: [
+    1: [
       {
         id: 1,
         question: '',
@@ -64,7 +67,7 @@ const Contacts = () => {
       },
     ],
   });
-  const [chosenType, setChosenType] = useState<string>('buy');
+  const [chosenTypeId, setChosenTypeId] = useState<number>(0);
 
   // custom hook으로 만들기?
   // 에러처리
@@ -72,7 +75,13 @@ const Contacts = () => {
     const fetchData = async () => {
       const qaTypesResult = await axios.get(API_END_POINT.QA_TYPES);
       const qaTypesData = qaTypesResult.data;
-      setQaTypes(qaTypesData);
+      setQaTypes(
+        qaTypesData.qaTypes.map((qaType: Qa) => ({
+          id: qaType.id,
+          name: qaType.name,
+        })),
+      );
+      setChosenTypeId(qaTypesData.qaTypes[0].id); // chosenTypeId 초기화
 
       const temp = await Promise.all(
         qaTypesData.qaTypes.map(async (qaType: Qa) => {
@@ -81,7 +90,7 @@ const Contacts = () => {
       );
 
       const qaListsData = temp.reduce((acc, current, idx) => {
-        return { ...acc, [qaTypesData.qaTypes[idx].key]: current.data.qas };
+        return { ...acc, [qaTypesData.qaTypes[idx].id]: current.data.qas };
       }, {});
 
       setQaLists(qaListsData);
@@ -96,13 +105,14 @@ const Contacts = () => {
       <Container>
         <CustomerServiceInfo />
         <ContentsDivider />
-        <QaTypeSelector
-          qaTypeList={qaTypes.qaTypes}
-          selected={chosenType}
-          onClick={setChosenType}
+        <MenuSelector
+          title="자주 묻는 질문"
+          menuList={qaTypes}
+          selected={chosenTypeId}
+          onClick={setChosenTypeId}
         />
         <ContentsDivider />
-        <Faq qaList={qaLists[chosenType]} />
+        <Faq qaList={qaLists[chosenTypeId]} />
       </Container>
     </>
   );
