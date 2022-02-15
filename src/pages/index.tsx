@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { getCategoryList, getItemList } from 'utils';
 import { ICategoryDetailProps, IMenuProps } from 'types';
-import { NavBar, Caret, MainDiscount, MainFooter } from 'components';
+import { NavBar, Caret, MainCategory, MainDiscount, MainFooter } from 'components';
 
 export const Button = styled.button`
   display: flex;
@@ -44,9 +44,8 @@ const Home: NextPage = ({
         <img alt="" src="/images/main-carousel-1.png" style={{ height: '141px' }} />
       </section>
 
-      <section data-test="main-category" />
-
-      <MainDiscount itemList={itemList} />
+      <MainCategory data-test="main-category" categoryList={categoryList} />
+      <MainDiscount data-test="main-discount" itemList={itemList} />
       <MainFooter data-test="main-footer" />
     </>
   );
