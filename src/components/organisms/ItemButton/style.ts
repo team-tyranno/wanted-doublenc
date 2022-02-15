@@ -1,9 +1,18 @@
 import styled from 'styled-components';
 
+export const Background = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+`;
+
 export const Button = styled.button<{ openOptions: boolean }>`
   background-color: #ff5757;
   height: 80px;
-  /* position: absolute; */
+  position: absolute;
   bottom: 0;
   width: 100%;
   border: none;
@@ -12,18 +21,23 @@ export const Button = styled.button<{ openOptions: boolean }>`
   font-size: 16px;
   outline: none;
   cursor: pointer;
-  ${(props) => props.openOptions && `background-color: #cccccc`}
+  ${(props) => props.openOptions && `background-color: #cccccc;`}
   z-index: 10;
   padding: 0;
 `;
 
-export const Options = styled.div`
+export const Options = styled.div<{ openOptions: boolean }>`
   width: 100%;
-  /* position: absolute; */
-  bottom: 0;
+  position: absolute;
+  top: 80px;
   color: black;
-  display: flex;
+  display: none;
   flex-direction: column;
+  background-color: #ffffff;
+  ${(props) =>
+    props.openOptions &&
+    `display: flex;
+  transform: translateY(-300px)`}
 `;
 
 export const Title = styled.div`
