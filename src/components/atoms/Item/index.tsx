@@ -11,7 +11,7 @@ export const Item = ({ data }: { data: IMenuProps }) => {
     return Math.round(((price - discountPrice) / price) * 100);
   };
 
-  const onClick = () => router.push({ pathname: `/con-items/${id}` });
+  const onClick = () => router.push({ pathname: `/items/${id}` });
 
   return (
     <S.Container onClick={onClick}>
