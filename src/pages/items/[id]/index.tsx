@@ -1,20 +1,36 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-// import {  } from 'components';
 import { API_END_POINT } from 'commons';
 import axios from 'axios';
-
+import { ItemButton, ItemWarning } from 'components';
+import { nanoid } from 'nanoid';
 import * as S from './style';
 
-// interface QaLists {
-//   [key: string]: [
-//     {
-//       id: number;
-//       question: string;
-//       answer: string;
-//     },
-//   ];
-// }
+interface IItemsProps {
+  id: string;
+  data: object;
+}
+
+const Items = ({ id, data }: IItemsProps) => {
+  console.log('options', data.options);
+  const splittedWarning = data.warning.split(/\[(.*)\]/g);
+  const titles: Array<string> = [];
+  const contents: Array<string> = [];
+  for (let i = 1; i < splittedWarning.length; i += 1) {
+    if (i % 2 === 1) titles.push(splittedWarning[i]);
+    else contents.push(splittedWarning[i].trim());
+  }
+
+  return (
+    <S.Container>
+      {id}
+      {Array.from(Array(titles.length).keys()).map((n) => (
+        <ItemWarning key={nanoid()} title={titles[n]} content={contents[n]} />
+      ))}
+      <ItemButton options={data.options} />
+    </S.Container>
+  );
+};
 
 export async function getServerSideProps(context) {
   const conItemId = context.params.id;
@@ -23,40 +39,10 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      item: data,
+      id: conItemId,
+      data: conItemData.conItem,
     },
   };
 }
-
-const Items = () => {
-  // const router = useRouter();
-  // const conItemId = router.query.id;
-  // console.log(conItemId);
-  // const [conItem, setConItem] = useState({});
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     // console.log(`${API_END_POINT.CON_ITEMS}${conItemId}`);
-  //     const conItemResult = await axios.get(`${API_END_POINT.CON_ITEMS}${conItemId}`);
-  // const conItemData = conItemResult.data;
-  // setConItem(conItemData);
-  // const qaTypesResult = await axios.get(API_END_POINT.QA_TYPES);
-  // const qaTypesData = qaTypesResult.data;
-  // setQaTypes(qaTypesData);
-  // const temp = await Promise.all(
-  //   qaTypesData.qaTypes.map(async (qaType: Qa) => {
-  //     return axios.get(`${API_END_POINT.QA_LISTS}${qaType.id}`);
-  //   }),
-  // );
-  // const qaListsData = temp.reduce((acc, current, idx) => {
-  //   return { ...acc, [qaTypesData.qaTypes[idx].key]: current.data.qas };
-  // }, {});
-  // setQaLists(qaListsData);
-  //   };
-  //   fetchData();
-  // }, []);
-
-  return <S.Container>{conItemId}</S.Container>;
-};
 
 export default Items;
