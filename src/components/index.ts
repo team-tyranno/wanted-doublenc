@@ -1,2 +1,2 @@
 // Atoms
-export {};
+export { BrandHeader } from 'components/atoms/BrandHeader';
