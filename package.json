@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "netlify-deploy": "next build && next export"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.11.0",

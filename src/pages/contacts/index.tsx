@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
 import { API_END_POINT } from 'commons';
@@ -38,7 +38,7 @@ interface IContactsProps {
 
 const Contacts = ({ qaTypes, qaLists }: IContactsProps) => {
   const [chosenTypeId, setChosenTypeId] = useState<number>(qaTypes[0].id);
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <>

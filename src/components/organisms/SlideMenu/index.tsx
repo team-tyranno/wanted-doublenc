@@ -16,6 +16,9 @@ export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
           임시 버튼
         </button>
       </S.Navbar> */}
+      <button type="button" onClick={() => onClick(!visible)}>
+        임시 버튼
+      </button>
       <S.Wrapper>
         <ContentsDivider />
         <S.Button type="button" onClick={() => router.push('/contacts')}>
