@@ -27,16 +27,17 @@ export const Faq = ({ qaList }: IFaqProps) => {
   return (
     <S.Container>
       <S.QaWrap>
-        {qaList.map((qa) => (
-          <Accordion
-            key={qa.id}
-            question={qa.question}
-            answer={qa.answer}
-            isOpen={qa.id === openAccordion}
-            id={qa.id}
-            onClick={handleOnClick}
-          />
-        ))}
+        {qaList !== undefined &&
+          qaList.map((qa) => (
+            <Accordion
+              key={qa.id}
+              question={qa.question}
+              answer={qa.answer}
+              isOpen={qa.id === openAccordion}
+              id={qa.id}
+              onClick={handleOnClick}
+            />
+          ))}
       </S.QaWrap>
     </S.Container>
   );
