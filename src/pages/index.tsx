@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import styled from 'styled-components';
 
 import { getCategoryList, getItemList } from 'utils';
-import { NavBar, Caret } from 'components';
+import { NavBar, Caret, MainFooter } from 'components';
 
 export const Button = styled.button`
   display: flex;
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 
       <section data-test="main-discount" />
 
-      <footer data-test="main-footer" />
+      <MainFooter data-test="main-footer" />
     </>
   );
 };
