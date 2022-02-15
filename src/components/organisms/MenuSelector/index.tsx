@@ -19,7 +19,7 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
   const cutByTranslateLimit = (length: number): number => {
     if (!slideRef.current) return 0;
     const translateLimit = slideRef.current.clientWidth - slideRef.current.scrollWidth;
-    console.log(slideRef.current.clientWidth, slideRef.current.scrollWidth);
+    // console.log(slideRef.current.clientWidth, slideRef.current.scrollWidth);
     return Math.max(Math.min(0, length), translateLimit);
   };
 
@@ -42,7 +42,7 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
     if (!isDragging) return;
     isDragging = false;
     currentPos = cutByTranslateLimit(currentPos + e.pageX - swipeStartPos);
-    console.log(currentPos);
+    // console.log(currentPos);
     swipeStartPos = 0;
   };
 
