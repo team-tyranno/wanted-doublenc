@@ -20,8 +20,9 @@ export const Title = styled.div`
   margin-bottom: 15px;
 `;
 
-export const QaTypeButtons = styled.div`
+export const MenuButtons = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 export const Button = styled.button<{ underLine: boolean }>`
@@ -43,11 +44,13 @@ export const Button = styled.button<{ underLine: boolean }>`
   flex-grow: 1;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
   border: none;
 
   height: 40px;
-  width: 100px;
+  white-space: nowrap;
 
   ${(props) =>
     props.underLine ? 'color: #ff5757;border-bottom: 2px solid #ff5757;' : 'color:#333;'}

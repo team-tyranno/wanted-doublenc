@@ -68,6 +68,7 @@ const Contacts = () => {
     ],
   });
   const [chosenTypeId, setChosenTypeId] = useState<number>(0);
+  const [testId, setTestId] = useState<number>(1); //
 
   // custom hook으로 만들기?
   // 에러처리
@@ -99,6 +100,45 @@ const Contacts = () => {
     fetchData();
   }, []);
 
+  const test = [
+    {
+      id: 1,
+      name: '땡철이',
+    },
+    {
+      id: 67,
+      name: '카페',
+    },
+    {
+      id: 62,
+      name: '편의점,마트',
+    },
+    {
+      id: 60,
+      name: '빵,아이스크림',
+    },
+    {
+      id: 61,
+      name: '피자,햄버거,치킨',
+    },
+    {
+      id: 65,
+      name: '문화,게임,영화',
+    },
+    {
+      id: 129,
+      name: '외식,분식',
+    },
+    {
+      id: 69,
+      name: '백화점,주유,뷰티',
+    },
+    {
+      id: 128,
+      name: '휴대폰 데이터',
+    },
+  ];
+
   return (
     <>
       <Navbar />
@@ -111,6 +151,7 @@ const Contacts = () => {
           selected={chosenTypeId}
           onClick={setChosenTypeId}
         />
+        <MenuSelector title="" menuList={test} selected={testId} onClick={setTestId} />
         <ContentsDivider />
         <Faq qaList={qaLists[chosenTypeId]} />
       </Container>
