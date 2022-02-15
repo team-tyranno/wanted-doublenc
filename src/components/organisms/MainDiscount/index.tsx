@@ -1,10 +1,9 @@
-import { getItemList } from 'utils';
 import { IMenuProps } from 'types';
 import * as S from './style';
 
 export const MainDiscount = ({ itemList }: { itemList: Array<IMenuProps> }) => {
   return (
-    <S.Wrapper data-test="main-discount">
+    <S.Wrapper data-test="discount-wrapper">
       <span>놓치지 마세요</span>
       <h4>오늘의 땡처리콘!</h4>
 
@@ -22,19 +21,10 @@ export const MainDiscount = ({ itemList }: { itemList: Array<IMenuProps> }) => {
               {item.discountRate}%
             </span>
             <strong data-test="discount-price">{item.ncSellingPrice.toLocaleString()}원</strong>
-            <del data-test="original-pricd">{item.originalPrice.toLocaleString()}원</del>
+            <del data-test="original-price">{item.originalPrice.toLocaleString()}원</del>
           </div>
         </S.Card>
       ))}
     </S.Wrapper>
   );
 };
-
-export async function getStaticProps() {
-  const [itemList] = await Promise.all([getItemList()]);
-  return {
-    props: {
-      itemList,
-    },
-  };
-}
