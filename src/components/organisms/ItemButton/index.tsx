@@ -4,9 +4,9 @@ import { useState } from 'react';
 import * as S from './style';
 
 interface IOptions {
-  count: string;
+  count: number;
   expireAt: string;
-  sellingPrice: string;
+  sellingPrice: number;
 }
 
 interface IItemButtonProps {
@@ -16,7 +16,7 @@ interface IItemButtonProps {
 export const ItemButton = ({ options }: IItemButtonProps) => {
   const [openOptions, setOpenOptions] = useState(false);
   const toggleOptions = () => (openOptions ? setOpenOptions(false) : setOpenOptions(true));
-  const availableOptions = options.filter((option) => Number(option.count) > 0);
+  const availableOptions = options.filter((option) => option.count > 0);
 
   return (
     <S.Button openOptions={openOptions} onClick={() => toggleOptions()}>

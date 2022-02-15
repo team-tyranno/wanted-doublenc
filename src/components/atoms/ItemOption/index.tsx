@@ -2,9 +2,9 @@
 import * as S from './style';
 
 interface IItemOptionProps {
-  count: string;
+  count: number;
   expireAt: string;
-  sellingPrice: string;
+  sellingPrice: number;
 }
 
 export const ItemOption = ({ count, expireAt, sellingPrice }: IItemOptionProps) => {
@@ -17,7 +17,7 @@ export const ItemOption = ({ count, expireAt, sellingPrice }: IItemOptionProps) 
         </S.Div>
         <S.Div>
           <S.Label>할인가</S.Label>
-          <S.Content>{Number(sellingPrice).toLocaleString()}원</S.Content>
+          <S.Content>{sellingPrice.toLocaleString()}원</S.Content>
         </S.Div>
       </S.Info>
       <S.DiscountRate>14%</S.DiscountRate>
