@@ -25,8 +25,6 @@ export const Container = styled.div`
 `;
 
 export const Body = styled.div`
-  /* margin-bottom: 80px; */
-  /* min-height: max-content; */
   position: relative;
   min-height: 500px;
 `;
@@ -59,10 +57,10 @@ interface Option {
   sellingPrice: number;
 }
 
-interface IItemsProps {
-  id: string;
-  data: ConItem;
-}
+// interface IItemsProps {
+//   id: string;
+//   data: ConItem;
+// }
 
 interface IParams {
   params: {
@@ -70,8 +68,7 @@ interface IParams {
   };
 }
 
-const Items = ({ id, data }: IItemsProps) => {
-  // console.log('data', data);
+const Items = ({ data }: { data: ConItem }) => {
   const router = useRouter();
   let splittedWarning: Array<string> = [];
   if (data.warning) {
@@ -126,7 +123,7 @@ export async function getServerSideProps({ params }: IParams) {
 
   return {
     props: {
-      id: conItemId,
+      // id: conItemId,
       data: conItemData.conItem,
     },
   };

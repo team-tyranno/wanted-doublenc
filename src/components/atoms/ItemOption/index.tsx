@@ -1,4 +1,3 @@
-import { SetStateAction } from 'react';
 import { formatDateString } from 'utils';
 import * as S from './style';
 

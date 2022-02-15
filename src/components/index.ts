@@ -7,7 +7,7 @@ export { ItemOption } from 'components/atoms/ItemOption';
 export { NumItems } from 'components/atoms/NumItems';
 export { Item } from 'components/atoms/Item';
 export { ItemInfo } from 'components/atoms/ItemInfo';
-
+export { Pencil } from 'components/atoms/Pencil';
 // Molecules
 export { Accordion } from 'components/molecules/Accordion';
 export { BrandLists } from 'components/molecules/BrandLists';
