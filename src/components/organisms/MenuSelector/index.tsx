@@ -25,7 +25,6 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     isDragging = true;
     swipeStartPos = e.pageX;
-    console.log('down');
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -42,7 +41,6 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
     if (!isDragging) return;
     isDragging = false;
     currentPos = cutByTranslateLimit(currentPos + e.pageX - swipeStartPos);
-    // console.log(currentPos);
     swipeStartPos = 0;
   };
 
@@ -57,14 +55,7 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
         ref={slideRef}
       >
         {menuList.map((menu) => (
-          <S.Button
-            key={menu.id}
-            underLine={menu.id === selected}
-            onClick={() => {
-              onClick(menu.id);
-              console.log('click');
-            }}
-          >
+          <S.Button key={menu.id} underLine={menu.id === selected} onClick={() => onClick(menu.id)}>
             {menu.name}
           </S.Button>
         ))}
