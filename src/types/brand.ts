@@ -23,4 +23,8 @@ interface IMenuProps {
   imageUrl: string;
 }
 
-export type { ICafeProps, IBrandProps, IMenuProps };
+interface IPathProps {
+  categoryId: string;
+}
+
+export type { ICafeProps, IBrandProps, IMenuProps, IPathProps };
