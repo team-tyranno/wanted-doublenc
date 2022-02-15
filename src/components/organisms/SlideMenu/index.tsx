@@ -11,11 +11,11 @@ export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
   const router = useRouter();
   return (
     <S.Container visible={visible}>
-      <S.Navbar>
+      {/* <S.Navbar>
         <button type="button" onClick={() => onClick(!visible)}>
           임시 버튼
         </button>
-      </S.Navbar>
+      </S.Navbar> */}
       <S.Wrapper>
         <ContentsDivider />
         <S.Button type="button" onClick={() => router.push('/contacts')}>

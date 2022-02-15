@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
 
 import * as S from './style';
 
@@ -15,7 +15,14 @@ interface IMenuSelectorProps {
 export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuSelectorProps) => {
   let isDragging = false;
   let swipeStartPos = 0;
+  let currentPos = 0;
   const slideRef = useRef<HTMLDivElement>(null);
+
+  const cutByTranslateLimit = (length: number): number => {
+    if (!slideRef.current) return 0;
+    const translateLimit = slideRef.current.clientWidth - slideRef.current.scrollWidth;
+    return Math.max(Math.min(0, length), translateLimit);
+  };
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     isDragging = true;
@@ -26,12 +33,17 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
     if (!isDragging) return;
     const swipeLength = e.pageX - swipeStartPos;
     if (slideRef.current) {
-      slideRef.current.style.transform = `translateX(${Math.min(swipeLength, 0)}px)`;
+      slideRef.current.style.transform = `translateX(${cutByTranslateLimit(
+        currentPos + swipeLength,
+      )}px)`;
     }
   };
 
-  const handleMouseUp = () => {
+  const handleMouseUp = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!isDragging) return;
     isDragging = false;
+    currentPos = cutByTranslateLimit(currentPos + e.pageX - swipeStartPos);
+    // console.log(currentPos);
     swipeStartPos = 0;
   };
 

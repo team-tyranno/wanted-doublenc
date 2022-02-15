@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
 import { API_END_POINT } from 'commons';
 import { Qa } from 'types';
