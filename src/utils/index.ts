@@ -1,2 +1,2 @@
 export { fetchDatas } from 'utils/fetchDatas';
-export { getCategoryPath, getCategotyData, getBrandsData } from 'utils/filterDatas';
+export { getCategoryPath, getCategotyData, getBrandsData, getMenuList } from 'utils/filterDatas';
