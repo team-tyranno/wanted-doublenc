@@ -1,5 +1,5 @@
 import { fetchDatas } from 'utils/fetchDatas';
-import { BRAND_LISTS, CON_CATEGORYS } from 'commons';
+import { CON_CATEGORYS, CON_ITEMS, BRAND_LISTS } from 'commons';
 import { ICafeProps } from 'types';
 
 async function getParseObject(url: string) {
@@ -15,6 +15,22 @@ async function getParseObject(url: string) {
   }
 
   return parsedDatas;
+}
+
+// [Main] 대분류 리스트 조회
+export async function getCategoryList() {
+  const parsedDatas = await getParseObject(CON_CATEGORYS);
+  console.log(parsedDatas[0]);
+
+  return parsedDatas[0];
+}
+
+// [Main] 땡처리 리스트 조회
+export async function getItemList() {
+  const parsedDatas = await getParseObject(CON_ITEMS);
+  console.log(parsedDatas[0]);
+
+  return parsedDatas[0];
 }
 
 export async function getCategoryPath() {
