@@ -70,9 +70,12 @@ interface IParams {
 }
 
 const Items = ({ id, data }: IItemsProps) => {
-  // console.log('data', data);
+  console.log('data', data);
   const router = useRouter();
-  const splittedWarning = data.warning.split(/\[(.*)\]/g);
+  let splittedWarning: Array<string> = [];
+  if (data.warning) {
+    splittedWarning = data.warning?.split(/\[(.*)\]/g);
+  }
   const titles: Array<string> = [];
   const contents: Array<string> = [];
   const itemInfoData = {
@@ -104,9 +107,10 @@ const Items = ({ id, data }: IItemsProps) => {
       />
       <ItemInfo data={itemInfoData} />
       <Body>
-        {Array.from(Array(titles.length).keys()).map((n) => (
-          <ItemWarning key={nanoid()} title={titles[n]} content={contents[n]} />
-        ))}
+        {data.warning &&
+          Array.from(Array(titles.length).keys()).map((n) => (
+            <ItemWarning key={nanoid()} title={titles[n]} content={contents[n]} />
+          ))}
         <BottomDiv />
         <ItemButton options={itemOptions.options} discountRate={itemOptions.discountRate} />
       </Body>
