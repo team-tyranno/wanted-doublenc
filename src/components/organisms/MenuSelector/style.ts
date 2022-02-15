@@ -28,7 +28,7 @@ export const Button = styled.button<{ underLine: boolean }>`
   -webkit-text-size-adjust: 100%;
   -webkit-box-direction: normal;
   font-family: Apple SD Gothic Neo, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   font-size: 100%;
   margin: 0;
@@ -45,6 +45,9 @@ export const Button = styled.button<{ underLine: boolean }>`
   padding-bottom: 1rem;
   text-align: center;
   border: none;
+
+  height: 40px;
+  width: 100px;
 
   ${(props) =>
     props.underLine ? 'color: #ff5757;border-bottom: 2px solid #ff5757;' : 'color:#333;'}
