@@ -8,12 +8,12 @@
 <br />
 
 <div align="center">
-  <h3 align="center">README 제목</h3>
+  <h3 align="center">3주차 과제 - 더블엔씨</h3>
   <p align="center">
     <a href="https://github.com/othneildrew/Best-README-Template">Best-README-Template</a>을 참고하여 만들어 본 README 템플릿입니다. 확인하시고 의견 주시면 감사하겠습니다!
     <br />
     <br />
-    <a href="https://hungry-meitner-18800a.netlify.app"><strong>배포 링크</strong></a>
+    <a href="https://ncnc-wanted.herokuapp.com/"><strong>배포 링크</strong></a>
   </p>
 </div>
 
