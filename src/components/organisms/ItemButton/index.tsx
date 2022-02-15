@@ -1,7 +1,6 @@
-import { ItemOption } from 'components';
+import { ItemOption, Pencil } from 'components';
 import { nanoid } from 'nanoid';
-import { ReactEventHandler, useState } from 'react';
-import { Pencil } from '/public/icons/pencil';
+import { useState } from 'react';
 import * as S from './style';
 
 interface IOptions {

@@ -1,4 +1,3 @@
-import { IMenuProps } from 'types';
 import * as S from './style';
 
 interface IItemInfoProps {
