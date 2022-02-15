@@ -4,7 +4,7 @@ import { BrandHeader, BrandLists } from 'components';
 
 const CategoryId = ({ datas }: { datas: ICafeProps }) => {
   const { conCategory2s } = datas;
-  console.log(conCategory2s);
+
   return (
     <>
       <BrandHeader />
