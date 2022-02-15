@@ -1,10 +1,18 @@
-import { IBrandProps, IMenuProps } from 'types';
+import { IBrandProps } from 'types';
 import { getBrandsData } from 'utils';
+import { BrandHeader, NumItems } from 'components';
 
-const BrandsId = (datas: Array<IMenuProps>) => {
-  console.log(datas);
+interface IBrandsIdProps {
+  datas: IBrandProps;
+}
 
-  return <div>ds</div>;
+const BrandsId = ({ datas }: IBrandsIdProps) => {
+  const { name, conItems } = datas;
+  return (
+    <BrandHeader title={name}>
+      <NumItems num={conItems.length} />
+    </BrandHeader>
+  );
 };
 
 interface IQueryProps {
@@ -20,7 +28,7 @@ export async function getServerSideProps({ query }: IQueryProps) {
 
   return {
     props: {
-      datas: datas[0].conItems,
+      datas: datas[0],
     },
   };
 }

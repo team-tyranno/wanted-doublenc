@@ -10,9 +10,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   box-sizing: border-box;
-  padding: 51px 0 0 17px;
 
-  background: red;
+  background: #ffffff;
 `;
 
 export const Title = styled.div`
@@ -23,8 +22,14 @@ export const Title = styled.div`
   justify-content: start;
   align-items: center;
 
+  margin-bottom: 30px;
+
+  & span {
+    margin-left: 20px;
+  }
+
   & .nav-title {
     position: absolute;
-    left: calc(50% - 100px / 6 + 0.5px);
+    left: calc(50% - 100px / 3.5 + 0.5px);
   }
 `;

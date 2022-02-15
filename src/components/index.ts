@@ -3,6 +3,7 @@ export { BrandButton } from 'components/atoms/BrandButton';
 export { BrandHeader } from 'components/molecules/BrandHeader';
 export { Caret } from 'components/atoms/Caret';
 export { ContentsDivider } from 'components/atoms/ContentsDivider';
+export { NumItems } from 'components/atoms/NumItems';
 
 // Molecules
 export { Accordion } from 'components/molecules/Accordion';

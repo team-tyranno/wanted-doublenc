@@ -13,7 +13,9 @@ export const BrandHeader = ({ title, children }: IBrandHeader) => {
   return (
     <S.Container>
       <S.Title>
-        <FontAwesomeIcon icon={faAngleLeft} size="lg" />
+        <span>
+          <FontAwesomeIcon icon={faAngleLeft} size="lg" />
+        </span>
         <div className="nav-title">{title}</div>
       </S.Title>
       {children}
