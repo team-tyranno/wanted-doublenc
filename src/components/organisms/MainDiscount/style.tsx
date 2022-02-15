@@ -31,6 +31,7 @@ export const Card = styled.article`
   border-top: 1px solid #eeeeee;
   padding: 17px;
   background-color: #ffffff;
+  cursor: pointer;
 
   .card-image {
     width: 80px;

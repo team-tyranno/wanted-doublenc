@@ -7,6 +7,19 @@ export const Wrapper = styled.footer`
 
   border-top: 1px solid #eeeeee;
   padding: 20px;
+  font-family: Apple SD Gothic Neo;
+  font-style: normal;
+  line-height: 1.15;
+
+  nav a {
+    display: block;
+    padding: 5px;
+
+    color: #888888;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+  }
 
   button {
     display: flex;
@@ -19,7 +32,6 @@ export const Wrapper = styled.footer`
     color: #333333;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1.15;
     cursor: pointer;
 
     svg {
@@ -30,7 +42,7 @@ export const Wrapper = styled.footer`
   }
 
   p {
-    color: #666666;
+    color: #999999;
     font-size: 11px;
     line-height: 1.7;
 
