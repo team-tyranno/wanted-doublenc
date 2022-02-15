@@ -16,7 +16,7 @@ export const MainDiscount = ({ itemList }: { itemList: Array<IMenuProps> }) => {
           />
           <div className="card-info">
             <span data-test="discount-brand">{item.conCategory2.name}</span>
-            <h6 data-test="discount-item">{item.name}</h6>
+            <h6 data-test="discount-name">{item.name}</h6>
             <span className="discount-rate" data-test="discount-rate">
               {item.discountRate}%
             </span>
