@@ -19,13 +19,13 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
   const cutByTranslateLimit = (length: number): number => {
     if (!slideRef.current) return 0;
     const translateLimit = slideRef.current.clientWidth - slideRef.current.scrollWidth;
-    // console.log(slideRef.current.clientWidth, slideRef.current.scrollWidth);
     return Math.max(Math.min(0, length), translateLimit);
   };
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     isDragging = true;
     swipeStartPos = e.pageX;
+    console.log('down');
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -57,7 +57,14 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
         ref={slideRef}
       >
         {menuList.map((menu) => (
-          <S.Button key={menu.id} underLine={menu.id === selected} onClick={() => onClick(menu.id)}>
+          <S.Button
+            key={menu.id}
+            underLine={menu.id === selected}
+            onClick={() => {
+              onClick(menu.id);
+              console.log('click');
+            }}
+          >
             {menu.name}
           </S.Button>
         ))}
