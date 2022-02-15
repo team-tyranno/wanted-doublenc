@@ -1,22 +1,26 @@
-import { IMenuProps } from 'types';
-import { useRouter } from 'next/router';
 import * as S from './style';
 
-export const Item = ({ data }: { data: IMenuProps }) => {
-  const router = useRouter();
+interface IItemInfoProps {
+  id: number;
+  brand: string;
+  name: string;
+  originalPrice: number;
+  minSellingPrice: number;
+  imageUrl: string;
+}
 
-  const { id, name, originalPrice, minSellingPrice, imageUrl } = data;
+export const ItemInfo = ({ data }: { data: IItemInfoProps }) => {
+  const { id, brand, name, originalPrice, minSellingPrice, imageUrl } = data;
 
   const calculateDiscountRate = (price: number, discountPrice: number) => {
     return Math.round(((price - discountPrice) / price) * 100);
   };
 
-  const onClick = () => router.push({ pathname: `/items/${id}` });
-
   return (
-    <S.Container onClick={onClick}>
+    <S.Container>
       <img src={imageUrl} alt={`${name} 이미지`} />
       <S.Inner>
+        <S.Brand>{brand}</S.Brand>
         <div className="title">{name}</div>
         <S.Price>
           <span className="rate">{`${calculateDiscountRate(

@@ -1,10 +1,14 @@
 // Atoms
 export { BrandButton } from 'components/atoms/BrandButton';
 export { Caret } from 'components/atoms/Caret';
-export { Cross } from 'components/atoms/Cross';
+export { CategoryButton } from 'components/atoms/CategoryButton';
 export { ContentsDivider } from 'components/atoms/ContentsDivider';
-export { NumItems } from 'components/atoms/NumItems';
+export { Cross } from 'components/atoms/Cross';
 export { Item } from 'components/atoms/Item';
+export { ItemInfo } from 'components/atoms/ItemInfo';
+export { ItemOption } from 'components/atoms/ItemOption';
+export { NumItems } from 'components/atoms/NumItems';
+export { Pencil } from 'components/atoms/Pencil';
 
 // Molecules
 export { Accordion } from 'components/molecules/Accordion';
@@ -14,6 +18,11 @@ export { ItemLists } from 'components/molecules/ItemLists';
 // Organisms
 export { CustomerServiceInfo } from 'components/organisms/CustomerServiceInfo';
 export { Faq } from 'components/organisms/Faq';
+export { ItemButton } from 'components/organisms/ItemButton';
+export { ItemWarning } from 'components/organisms/ItemWarning';
+export { MainCategory } from 'components/organisms/MainCategory';
+export { MainDiscount } from 'components/organisms/MainDiscount';
+export { MainFooter } from 'components/organisms/MainFooter';
 export { MenuSelector } from 'components/organisms/MenuSelector';
-export { SlideMenu } from 'components/organisms/SlideMenu';
 export { NavBar } from 'components/organisms/NavBar';
+export { SlideMenu } from 'components/organisms/SlideMenu';
