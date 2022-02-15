@@ -6,7 +6,8 @@ import * as S from './style';
 
 interface IBrandHeader {
   title: string;
-  children: React.ReactNode;
+  // eslint-disable-next-line react/require-default-props
+  children?: React.ReactNode;
 }
 
 export const BrandHeader = ({ title, children }: IBrandHeader) => {
