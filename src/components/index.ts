@@ -10,6 +10,7 @@ export { Item } from 'components/atoms/Item';
 export { Accordion } from 'components/molecules/Accordion';
 export { BrandLists } from 'components/molecules/BrandLists';
 export { ItemLists } from 'components/molecules/ItemLists';
+export { MainFooter } from 'components/molecules/MainFooter';
 
 // Organisms
 export { CustomerServiceInfo } from 'components/organisms/CustomerServiceInfo';
