@@ -3,14 +3,14 @@ import { ICafeProps, IPathProps } from 'types';
 import { BrandHeader, BrandLists } from 'components';
 
 const CategoryId = ({ datas }: { datas: ICafeProps }) => {
-  const { name, conCategory2s } = datas;
+  const { id, name, conCategory2s } = datas;
 
   return (
     <>
       <BrandHeader title={name}>
         <div>안녕</div>
       </BrandHeader>
-      <BrandLists datas={conCategory2s} />
+      <BrandLists query={id.toString()} datas={conCategory2s} />
     </>
   );
 };
