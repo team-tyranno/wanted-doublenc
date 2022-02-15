@@ -62,15 +62,15 @@ export const Options = styled.div<{ openOptions: boolean }>`
   position: absolute;
   top: 420px;
   color: black;
-  max-height: 230px;
+  height: 230px;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #f1f3f4;
   z-index: 5;
   ${(props) =>
     props.openOptions &&
     `transform: translateY(-230px);
-  transition: transform .3s linear;`}
+  transition: transform .2s linear;`}
 `;
 
 export const Title = styled.div`
@@ -82,5 +82,5 @@ export const Title = styled.div`
 
 export const OptionList = styled.div`
   max-height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;

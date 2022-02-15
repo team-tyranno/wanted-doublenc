@@ -7,6 +7,7 @@ export const Container = styled.div`
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
+  background-color: #ffffff;
 `;
 
 export const Info = styled.div`
