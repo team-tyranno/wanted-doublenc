@@ -3,11 +3,13 @@ import { ICafeProps, IPathProps } from 'types';
 import { BrandHeader, BrandLists } from 'components';
 
 const CategoryId = ({ datas }: { datas: ICafeProps }) => {
-  const { conCategory2s } = datas;
+  const { name, conCategory2s } = datas;
 
   return (
     <>
-      <BrandHeader />
+      <BrandHeader title={name}>
+        <div>안녕</div>
+      </BrandHeader>
       <BrandLists datas={conCategory2s} />
     </>
   );

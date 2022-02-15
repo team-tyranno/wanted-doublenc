@@ -28,11 +28,3 @@ export const Title = styled.div`
     left: calc(50% - 100px / 6 + 0.5px);
   }
 `;
-
-export const Slider = styled.div`
-  width: 100%;
-  height: 50px;
-
-  margin-top: 17px;
-  background: black;
-`;

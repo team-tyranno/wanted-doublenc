@@ -1,16 +1,22 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
+import React from 'react';
 import * as S from './style';
 
-export const BrandHeader = () => {
+interface IBrandHeader {
+  title: string;
+  children: React.ReactNode;
+}
+
+export const BrandHeader = ({ title, children }: IBrandHeader) => {
   return (
     <S.Container>
       <S.Title>
         <FontAwesomeIcon icon={faAngleLeft} size="lg" />
-        <div className="nav-title">카페</div>
+        <div className="nav-title">{title}</div>
       </S.Title>
-      <S.Slider>하이</S.Slider>
+      {children}
     </S.Container>
   );
 };
