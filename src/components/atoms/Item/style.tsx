@@ -11,6 +11,8 @@ export const Container = styled.div`
 
   padding: 15px 0 15px 21px;
 
+  cursor: pointer;
+
   & img {
     width: 70px;
     height: 70px;
