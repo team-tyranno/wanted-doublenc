@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SlideMenu } from 'components';
+import { NavBar, SlideMenu } from 'components';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -13,6 +13,7 @@ const SlideMenuTest = () => {
   return (
     <Container>
       <SlideMenu visible={slideMenuVisible} onClick={setSlideMenuVisible} />
+      <NavBar />
       <div>something</div>
       <button type="button" onClick={() => setSlideMenuVisible(true)}>
         sliderMenu on
