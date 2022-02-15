@@ -1,6 +1,6 @@
 import { IBrandProps } from 'types';
 import { getBrandsData } from 'utils';
-import { BrandHeader, NumItems } from 'components';
+import { BrandHeader, ItemLists, NumItems } from 'components';
 
 interface IBrandsIdProps {
   datas: IBrandProps;
@@ -9,9 +9,12 @@ interface IBrandsIdProps {
 const BrandsId = ({ datas }: IBrandsIdProps) => {
   const { name, conItems } = datas;
   return (
-    <BrandHeader title={name}>
-      <NumItems num={conItems.length} />
-    </BrandHeader>
+    <>
+      <BrandHeader title={name}>
+        <NumItems num={conItems.length} />
+      </BrandHeader>
+      <ItemLists conItems={conItems} />
+    </>
   );
 };
 
