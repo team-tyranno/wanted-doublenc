@@ -1,6 +1,7 @@
 // Atoms
 export { BrandButton } from 'components/atoms/BrandButton';
 export { Caret } from 'components/atoms/Caret';
+export { Cross } from 'components/atoms/Cross';
 export { ContentsDivider } from 'components/atoms/ContentsDivider';
 export { NumItems } from 'components/atoms/NumItems';
 export { Item } from 'components/atoms/Item';

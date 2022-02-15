@@ -1,6 +1,6 @@
-// import { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
+import { NavBar, ContentsDivider, CustomerServiceInfo, Faq, MenuSelector, Cross } from 'components';
 import { API_END_POINT } from 'commons';
 import { Qa, ICategoryDetailProps } from 'types';
 import axios from 'axios';
@@ -20,6 +20,20 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
+export const Button = styled.button`
+  -webkit-box-direction: normal;
+  margin: 0;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  box-shadow: none !important;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  display: flex;
+  padding: 19px;
+`;
+
 interface IContactsProps {
   qaTypes: Array<ICategoryDetailProps>;
   qaLists: {
@@ -35,11 +49,18 @@ interface IContactsProps {
 
 const Contacts = ({ qaTypes, qaLists }: IContactsProps) => {
   const [chosenTypeId, setChosenTypeId] = useState<number>(qaTypes[0].id);
-  // const router = useRouter();
+  const router = useRouter();
 
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar
+        title="고객센터"
+        rightButton={
+          <Button type="button" onClick={() => router.back()}>
+            <Cross />
+          </Button>
+        }
+      />
       <Container>
         <CustomerServiceInfo />
         <ContentsDivider />

@@ -36,8 +36,7 @@ export const Button = styled.button`
   border: none;
   background-color: #fff;
   display: flex;
-  padding: 17px;
-  width: 100%;
+  padding: 19px;
 `;
 
 export const ButtonDescription = styled.span`

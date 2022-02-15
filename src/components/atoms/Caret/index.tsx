@@ -24,8 +24,8 @@ export const Caret = ({ direction }: ICaretProps) => {
     <S.Container>
       <S.Svg
         data-v-52e7c3af=""
-        width="15"
-        height="8"
+        width="17"
+        height="9"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         degree={calcDegree(direction)}
