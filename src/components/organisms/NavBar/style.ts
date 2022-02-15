@@ -9,7 +9,6 @@ export const Container = styled.nav`
   color: #000000;
   -webkit-box-direction: normal;
   box-sizing: border-box;
-  position: fixed;
   display: flex;
   background-color: #fff;
   height: 59px;
