@@ -2,6 +2,7 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import type { AppProps } from 'next/app';
 import { GlobalStyle } from '../styles/GlobalStyle';
+import '../../public/fonts/fonts.css';
 
 const theme = {
   colors: {

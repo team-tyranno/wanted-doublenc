@@ -26,6 +26,9 @@ export const Inner = styled.div`
   justify-content: center;
   align-items: start;
   flex-direction: column;
+  font-size: 16px;
+  font-family: Apple SD Gothic Neo, sans-serif;
+  font-weight: 400;
 
   & .title {
     padding-bottom: 13px;
