@@ -28,6 +28,8 @@ const Container = styled.div`
   left: 0;
   right: 0;
 
+  overflow-x: hidden;
+
   @media screen and (max-width: 375) {
     width: 100%;
     height: 100%;
