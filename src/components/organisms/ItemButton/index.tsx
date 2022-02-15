@@ -1,6 +1,7 @@
 import { ItemOption } from 'components';
 import { nanoid } from 'nanoid';
-import { useState } from 'react';
+import { ReactEventHandler, useState } from 'react';
+import { Pencil } from '/public/icons/pencil';
 import * as S from './style';
 
 interface IOptions {
@@ -16,26 +17,51 @@ interface IItemButtonProps {
 
 export const ItemButton = ({ options, discountRate }: IItemButtonProps) => {
   const [openOptions, setOpenOptions] = useState(false);
-  const toggleOptions = () => (openOptions ? setOpenOptions(false) : setOpenOptions(true));
+  const [selectedOption, setSelectedOption] = useState<null | string>(null);
+
+  const toggleOptions = () => {
+    if (openOptions) setOpenOptions(false);
+    else setOpenOptions(true);
+  };
   const availableOptions = options.filter((option) => option.count > 0);
 
   return (
     <S.Background openOptions={openOptions} onClick={() => openOptions && toggleOptions()}>
-      <S.Button openOptions={openOptions} onClick={() => toggleOptions()}>
-        옵션 선택하기
-        <S.Options openOptions={openOptions}>
-          <S.Title>옵션 선택하기</S.Title>
+      {selectedOption && (
+        <S.SelectedOption>
+          <S.Div
+            onClick={() => {
+              setSelectedOption(null);
+              setOpenOptions(true);
+            }}
+          >
+            {selectedOption}
+            <Pencil />
+          </S.Div>
+        </S.SelectedOption>
+      )}
+      <S.Button
+        openOptions={openOptions}
+        selectedOption={selectedOption}
+        onClick={() => !selectedOption && toggleOptions()}
+      >
+        {!openOptions && !selectedOption ? '옵션 선택하기' : '구매하기'}
+      </S.Button>
+      <S.Options openOptions={openOptions}>
+        <S.Title>옵션 선택하기</S.Title>
+        <S.OptionList>
           {availableOptions.map((e) => (
             <ItemOption
               key={nanoid()}
+              setSelectedOption={setSelectedOption}
               count={e.count}
               expireAt={e.expireAt}
               sellingPrice={e.sellingPrice}
               discountRate={discountRate}
             />
           ))}
-        </S.Options>
-      </S.Button>
+        </S.OptionList>
+      </S.Options>
     </S.Background>
   );
 };

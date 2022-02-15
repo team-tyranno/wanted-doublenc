@@ -6,6 +6,7 @@ export const Container = styled.div`
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
 `;
 
 export const Info = styled.div`
@@ -24,6 +25,7 @@ export const DiscountRate = styled.div`
 export const Div = styled.div`
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 export const Label = styled.span`
@@ -34,6 +36,7 @@ export const Label = styled.span`
 
 export const Content = styled.span`
   position: absolute;
-  left: 70px;
+  left: 50px;
   font-weight: 400;
+  min-width: max-content;
 `;

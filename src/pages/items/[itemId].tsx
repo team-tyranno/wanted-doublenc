@@ -28,6 +28,7 @@ export const Body = styled.div`
   /* margin-bottom: 80px; */
   /* min-height: max-content; */
   position: relative;
+  min-height: 500px;
 `;
 
 export const BottomDiv = styled.div`
@@ -70,7 +71,7 @@ interface IParams {
 }
 
 const Items = ({ id, data }: IItemsProps) => {
-  console.log('data', data);
+  // console.log('data', data);
   const router = useRouter();
   let splittedWarning: Array<string> = [];
   if (data.warning) {

@@ -1,16 +1,30 @@
+import { SetStateAction } from 'react';
 import { formatDateString } from 'utils';
 import * as S from './style';
 
 interface IItemOptionProps {
+  setSelectedOption: React.Dispatch<React.SetStateAction<null | string>>;
   count: number;
   expireAt: string;
   sellingPrice: number;
   discountRate: number;
 }
 
-export const ItemOption = ({ count, expireAt, sellingPrice, discountRate }: IItemOptionProps) => {
+export const ItemOption = ({
+  setSelectedOption,
+  count,
+  expireAt,
+  sellingPrice,
+  discountRate,
+}: IItemOptionProps) => {
   return (
-    <S.Container>
+    <S.Container
+      onClick={() =>
+        setSelectedOption(
+          `${formatDateString(expireAt)} 까지 / ${sellingPrice.toLocaleString()}원 `,
+        )
+      }
+    >
       <S.Info>
         <S.Div>
           <S.Label>유효기간</S.Label>
