@@ -9,3 +9,4 @@ export { Accordion } from 'components/molecules/Accordion';
 export { CustomerServiceInfo } from 'components/organisms/CustomerServiceInfo';
 export { Faq } from 'components/organisms/Faq';
 export { QaTypeSelector } from 'components/organisms/QaTypeSelecter';
+export { SlideMenu } from 'components/organisms/SlideMenu';
