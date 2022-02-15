@@ -70,7 +70,7 @@ export const Options = styled.div<{ openOptions: boolean }>`
   ${(props) =>
     props.openOptions &&
     `transform: translateY(-230px);
-  transition: transform .3s linear;`}
+  transition: transform .2s linear;`}
 `;
 
 export const Title = styled.div`
@@ -82,5 +82,5 @@ export const Title = styled.div`
 
 export const OptionList = styled.div`
   max-height: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
