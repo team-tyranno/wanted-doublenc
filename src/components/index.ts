@@ -14,4 +14,5 @@ export { ItemLists } from 'components/molecules/ItemLists';
 // Organisms
 export { CustomerServiceInfo } from 'components/organisms/CustomerServiceInfo';
 export { Faq } from 'components/organisms/Faq';
-export { QaTypeSelector } from 'components/organisms/QaTypeSelecter';
+export { MenuSelector } from 'components/organisms/MenuSelector';
+export { SlideMenu } from 'components/organisms/SlideMenu';

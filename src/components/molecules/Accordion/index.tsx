@@ -16,7 +16,7 @@ export const Accordion = ({ question, answer, isOpen, onClick, id }: IAccordionP
       <S.FAQ type="button" onClick={() => onClick(id)}>
         <S.QMark>Q.</S.QMark>
         <S.Question>{question}</S.Question>
-        <Caret isOpen={isOpen} />
+        <Caret direction={isOpen ? 'up' : 'down'} />
       </S.FAQ>
       {isOpen && (
         <S.AnswerBox>

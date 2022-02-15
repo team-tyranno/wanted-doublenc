@@ -12,9 +12,9 @@ export const Container = styled.span`
   font-weight: 500;
 `;
 
-export const Svg = styled.svg<{ isOpen: boolean }>`
+export const Svg = styled.svg<{ degree: number }>`
   fill: none;
   align-self: center;
   overflow: hidden;
-  ${(props) => props.isOpen && 'transform: rotate(-180deg);'}
+  transform: rotate(${(props) => props.degree}deg);
 `;
