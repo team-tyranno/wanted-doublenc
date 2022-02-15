@@ -19,8 +19,11 @@ interface IMenuProps {
   name: string;
   originalPrice: number;
   minSellingPrice: number;
+  ncSellingPrice: number;
   count: number;
+  discountRate: number;
   imageUrl: string;
+  conCategory2: IBrandProps;
 }
 
 interface IPathProps {

@@ -16,6 +16,8 @@ export { ItemLists } from 'components/molecules/ItemLists';
 // Organisms
 export { CustomerServiceInfo } from 'components/organisms/CustomerServiceInfo';
 export { Faq } from 'components/organisms/Faq';
+export { MainDiscount } from 'components/organisms/MainDiscount';
+export { MainFooter } from 'components/organisms/MainFooter';
 export { MenuSelector } from 'components/organisms/MenuSelector';
 export { SlideMenu } from 'components/organisms/SlideMenu';
 export { ItemWarning } from 'components/organisms/ItemWarning';
