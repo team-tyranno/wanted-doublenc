@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
 import { API_END_POINT } from 'commons';
-import { Qa } from 'types';
+import { Qa, ICategoryDetailProps } from 'types';
 import axios from 'axios';
 
 import styled from 'styled-components';
@@ -21,10 +21,7 @@ export const Container = styled.div`
 `;
 
 interface IContactsProps {
-  qaTypes: {
-    id: number;
-    name: string;
-  }[];
+  qaTypes: Array<ICategoryDetailProps>;
   qaLists: {
     [key: number]: [
       {

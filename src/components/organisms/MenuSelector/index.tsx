@@ -1,13 +1,11 @@
 import { useRef } from 'react';
 
+import { ICategoryDetailProps } from 'types';
 import * as S from './style';
 
 interface IMenuSelectorProps {
   title?: string;
-  menuList: {
-    id: number;
-    name: string;
-  }[];
+  menuList: Array<ICategoryDetailProps>;
   selected: number;
   onClick: (key: number) => void;
 }
