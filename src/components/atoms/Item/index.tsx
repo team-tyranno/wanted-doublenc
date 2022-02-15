@@ -23,8 +23,8 @@ export const Item = ({ data }: { data: IMenuProps }) => {
             originalPrice,
             minSellingPrice,
           )}%`}</span>
-          <span className="original-price">{originalPrice}</span>
-          <span className="discount-price">{minSellingPrice}</span>
+          <span className="original-price">{originalPrice.toLocaleString()}원</span>
+          <span className="discount-price">{minSellingPrice.toLocaleString()}원</span>
         </S.Price>
       </S.Inner>
     </S.Container>

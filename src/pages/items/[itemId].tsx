@@ -31,7 +31,7 @@ export const Body = styled.div`
 `;
 
 export const BottomDiv = styled.div`
-  /* margin-bottom: 80px; */
+  height: 80px;
 `;
 
 interface ConItem {

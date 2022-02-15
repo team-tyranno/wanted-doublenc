@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const Background = styled.div`
+export const Background = styled.div<{ openOptions: boolean }>`
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 5;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  ${(props) => props.openOptions && `background-color: rgba(0, 0, 0, 0.3);`}
 `;
 
 export const Button = styled.button<{ openOptions: boolean }>`

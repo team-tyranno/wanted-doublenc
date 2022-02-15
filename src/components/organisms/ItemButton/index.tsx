@@ -20,7 +20,7 @@ export const ItemButton = ({ options, discountRate }: IItemButtonProps) => {
   const availableOptions = options.filter((option) => option.count > 0);
 
   return (
-    <S.Background>
+    <S.Background openOptions={openOptions} onClick={() => openOptions && toggleOptions()}>
       <S.Button openOptions={openOptions} onClick={() => toggleOptions()}>
         옵션 선택하기
         <S.Options openOptions={openOptions}>
