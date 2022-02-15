@@ -6,6 +6,7 @@ export { ContentsDivider } from 'components/atoms/ContentsDivider';
 export { ItemOption } from 'components/atoms/ItemOption';
 export { NumItems } from 'components/atoms/NumItems';
 export { Item } from 'components/atoms/Item';
+export { ItemInfo } from 'components/atoms/ItemInfo';
 
 // Molecules
 export { Accordion } from 'components/molecules/Accordion';
