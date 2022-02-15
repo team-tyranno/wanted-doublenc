@@ -12,6 +12,8 @@ export const Container = styled.div`
   background: #fff;
   border-radius: 5px;
 
+  cursor: pointer;
+
   & img {
     width: 36px;
     height: 36px;
