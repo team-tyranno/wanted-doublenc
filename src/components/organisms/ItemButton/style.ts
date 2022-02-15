@@ -62,10 +62,10 @@ export const Options = styled.div<{ openOptions: boolean }>`
   position: absolute;
   top: 420px;
   color: black;
-  max-height: 230px;
+  height: 230px;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: #f1f3f4;
   z-index: 5;
   ${(props) =>
     props.openOptions &&
