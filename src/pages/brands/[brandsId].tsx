@@ -27,7 +27,7 @@ interface IQueryProps {
 
 export async function getServerSideProps({ query }: IQueryProps) {
   const { id, brandsId } = query;
-  const datas: Array<IBrandProps> = await getBrandsData(id, brandsId);
+  const datas: Array<IBrandProps> = await getBrandsData(Number(id), Number(brandsId));
 
   return {
     props: {
