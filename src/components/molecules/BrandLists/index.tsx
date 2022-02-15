@@ -3,7 +3,6 @@ import { IBrandProps } from 'types';
 import * as S from './style';
 
 export const BrandLists = ({ query, datas }: { query: string; datas: Array<IBrandProps> }) => {
-  console.log();
   return (
     <S.Container>
       {datas.map((data) => (

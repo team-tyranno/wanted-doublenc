@@ -7,3 +7,4 @@ export {
   getBrandsData,
   getMenuList,
 } from 'utils/filterDatas';
+export { formatDateString } from 'utils/formatDateString';
