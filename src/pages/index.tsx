@@ -1,9 +1,9 @@
-import { useEffect } from 'react';
 import type { NextPage } from 'next';
 import styled from 'styled-components';
 
 import { getCategoryList, getItemList } from 'utils';
-import { NavBar, Caret, MainFooter } from 'components';
+import { ICategoryDetailProps, IMenuProps } from 'types';
+import { NavBar, Caret, MainDiscount, MainFooter } from 'components';
 
 export const Button = styled.button`
   display: flex;
@@ -21,12 +21,13 @@ export const Button = styled.button`
   -webkit-box-direction: normal;
 `;
 
-const Home: NextPage = () => {
-  useEffect(() => {
-    getCategoryList();
-    getItemList();
-  }, []);
-
+const Home: NextPage = ({
+  categoryList,
+  itemList,
+}: {
+  categoryList: Array<ICategoryDetailProps>;
+  itemList: Array<IMenuProps>;
+}) => {
   return (
     <>
       <NavBar
@@ -45,11 +46,20 @@ const Home: NextPage = () => {
 
       <section data-test="main-category" />
 
-      <section data-test="main-discount" />
-
+      <MainDiscount itemList={itemList} />
       <MainFooter data-test="main-footer" />
     </>
   );
 };
+
+export async function getStaticProps() {
+  const [categoryList, itemList] = await Promise.all([getCategoryList(), getItemList()]);
+  return {
+    props: {
+      categoryList,
+      itemList,
+    },
+  };
+}
 
 export default Home;
