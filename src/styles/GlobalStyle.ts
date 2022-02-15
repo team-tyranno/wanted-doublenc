@@ -1,20 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
 
-export const GlobalStyle = createGlobalStyle`
-
-  body {
-    background: #E5E5E5;
-  }
+const GlobalStyle = createGlobalStyle`
   ${reset}
+
   *, *::before, *::after {
     box-sizing: border-box;
   }
+
   :root {
-    background-color: #ffffff;
+    background-color: #e5e5e5;
   }
+
   a {
     color: inherit;
     text-decoration: none;
   }
 `;
+
+export default GlobalStyle;
