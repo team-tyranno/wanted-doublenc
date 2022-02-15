@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,12 +12,14 @@ interface IBrandHeader {
 }
 
 export const BrandHeader = ({ title, children }: IBrandHeader) => {
+  const router = useRouter();
+
   return (
     <S.Container>
       <S.Title>
-        <span>
+        <button type="button" onClick={() => router.back()}>
           <FontAwesomeIcon icon={faAngleLeft} size="lg" />
-        </span>
+        </button>
         <div className="nav-title">{title}</div>
       </S.Title>
       {children}

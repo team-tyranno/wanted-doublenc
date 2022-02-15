@@ -7,9 +7,7 @@ const CategoryId = ({ datas }: { datas: ICafeProps }) => {
 
   return (
     <>
-      <BrandHeader title={name}>
-        <div>안녕</div>
-      </BrandHeader>
+      <BrandHeader title={name} />
       <BrandLists query={id.toString()} datas={conCategory2s} />
     </>
   );

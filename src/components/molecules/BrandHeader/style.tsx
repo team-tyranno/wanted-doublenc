@@ -24,8 +24,12 @@ export const Title = styled.div`
 
   margin-bottom: 30px;
 
-  & span {
+  & button {
     margin-left: 20px;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
   }
 
   & .nav-title {
