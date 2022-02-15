@@ -6,9 +6,15 @@ export const Container = styled.div`
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
 
+  font-size: 14px;
+  font-family: Apple SD Gothic Neo, sans-serif;
+  font-weight: 400;
+
   display: flex;
   justify-content: start;
   align-items: center;
+
+  background: #ffffff;
 
   & div {
     color: #000000;

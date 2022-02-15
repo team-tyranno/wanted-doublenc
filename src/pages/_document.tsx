@@ -29,9 +29,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link rel="stylesheet" href="fonts/fonts.css" />
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
