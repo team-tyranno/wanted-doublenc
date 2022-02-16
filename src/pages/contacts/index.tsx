@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { NavBar, ContentsDivider, CustomerServiceInfo, Faq, MenuSelector, Cross } from 'components';
+import { NavBar, ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
 import { API_END_POINT } from 'commons';
 import { Qa, ICategoryDetailProps } from 'types';
 import axios from 'axios';
