@@ -1,4 +1,3 @@
-import type { NextPage } from 'next';
 import { useState } from 'react';
 import styled from 'styled-components';
 
@@ -29,7 +28,7 @@ export const Button = styled.button`
   -webkit-box-direction: normal;
 `;
 
-const Home: NextPage = ({
+const Home = ({
   categoryList,
   itemList,
 }: {
