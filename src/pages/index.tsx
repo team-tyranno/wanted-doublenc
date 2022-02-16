@@ -37,7 +37,11 @@ const Home: NextPage = ({
         data-test="main-header"
         leftButton={
           <Button type="button" onClick={() => setSlideMenuVisible(true)}>
-            <Caret direction="left" />
+            <img
+              alt=""
+              src="/images/hamburgerMenu.png"
+              style={{ height: '30px', width: '30px', position: 'relative', bottom: '5px' }}
+            />
           </Button>
         }
         title="니콘내콘"
