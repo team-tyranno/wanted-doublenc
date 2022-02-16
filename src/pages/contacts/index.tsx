@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import { NavBar, ContentsDivider, CustomerServiceInfo, Faq, MenuSelector, Cross } from 'components';
+import { NavBar, ContentsDivider, CustomerServiceInfo, Faq, MenuSelector } from 'components';
 import { API_END_POINT } from 'commons';
 import { Qa, ICategoryDetailProps } from 'types';
 import axios from 'axios';
@@ -56,7 +56,11 @@ const Contacts = ({ qaTypes, qaLists }: IContactsProps) => {
         title="고객센터"
         rightButton={
           <Button type="button" onClick={() => router.back()}>
-            <Cross />
+            <img
+              alt=""
+              src="/images/close.png"
+              style={{ height: '25px', width: '25px', position: 'relative', bottom: '3px' }}
+            />
           </Button>
         }
       />

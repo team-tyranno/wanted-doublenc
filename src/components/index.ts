@@ -3,7 +3,6 @@ export { BrandButton } from 'components/atoms/BrandButton';
 export { Caret } from 'components/atoms/Caret';
 export { CategoryButton } from 'components/atoms/CategoryButton';
 export { ContentsDivider } from 'components/atoms/ContentsDivider';
-export { Cross } from 'components/atoms/Cross';
 export { Item } from 'components/atoms/Item';
 export { ItemInfo } from 'components/atoms/ItemInfo';
 export { ItemOption } from 'components/atoms/ItemOption';

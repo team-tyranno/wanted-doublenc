@@ -1,9 +1,17 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import { getCategoryList, getItemList } from 'utils';
 import { ICategoryDetailProps, IMenuProps } from 'types';
-import { NavBar, Caret, MainCarousel, MainCategory, MainDiscount, MainFooter } from 'components';
+import {
+  SlideMenu,
+  NavBar,
+  MainCarousel,
+  MainCategory,
+  MainDiscount,
+  MainFooter,
+} from 'components';
 
 export const Button = styled.button`
   display: flex;
@@ -28,13 +36,19 @@ const Home: NextPage = ({
   categoryList: Array<ICategoryDetailProps>;
   itemList: Array<IMenuProps>;
 }) => {
+  const [slideMenuVisible, setSlideMenuVisible] = useState(false);
   return (
     <>
+      <SlideMenu visible={slideMenuVisible} onClick={setSlideMenuVisible} />
       <NavBar
         data-test="main-header"
         leftButton={
-          <Button type="button">
-            <Caret direction="left" />
+          <Button type="button" onClick={() => setSlideMenuVisible(true)}>
+            <img
+              alt=""
+              src="/images/hamburgerMenu.png"
+              style={{ height: '30px', width: '30px', position: 'relative', bottom: '5px' }}
+            />
           </Button>
         }
         title="니콘내콘"
