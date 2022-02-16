@@ -1,7 +1,24 @@
 import { useState } from 'react';
 import { Caret } from 'components';
-import { footerLinks } from '../../../../public/footerData.json';
 import * as S from './style';
+
+const footerLinks = [
+  {
+    id: 1,
+    text: '회사소개서',
+    link: 'https://ncnc-public.s3.ap-northeast-2.amazonaws.com/doublenc.pdf',
+  },
+  {
+    id: 2,
+    text: '사업/제휴 문의',
+    link: 'mailTo:contact@doublenc.com',
+  },
+  {
+    id: 3,
+    text: '회사소개서',
+    link: 'https://ncnc.io/privacy',
+  },
+];
 
 export const MainFooter = () => {
   const [isFooterInfoShown, setIsFooterInfoShown] = useState(false);

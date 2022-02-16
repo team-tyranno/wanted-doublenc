@@ -1,7 +1,7 @@
 import React from 'react';
 import type { AppProps } from 'next/app';
 import styled, { ThemeProvider } from 'styled-components';
-import { GlobalStyle } from '../styles/GlobalStyle';
+import GlobalStyle from '../styles/GlobalStyle';
 import '../../public/fonts/fonts.css';
 
 const theme = {
