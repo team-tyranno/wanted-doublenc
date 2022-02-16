@@ -1,9 +1,10 @@
 import type { NextPage } from 'next';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import { getCategoryList, getItemList } from 'utils';
 import { ICategoryDetailProps, IMenuProps } from 'types';
-import { NavBar, Caret, MainCategory, MainDiscount, MainFooter } from 'components';
+import { SlideMenu, NavBar, Caret, MainCategory, MainDiscount, MainFooter } from 'components';
 
 export const Button = styled.button`
   display: flex;
@@ -28,12 +29,14 @@ const Home: NextPage = ({
   categoryList: Array<ICategoryDetailProps>;
   itemList: Array<IMenuProps>;
 }) => {
+  const [slideMenuVisible, setSlideMenuVisible] = useState(false);
   return (
     <>
+      <SlideMenu visible={slideMenuVisible} onClick={setSlideMenuVisible} />
       <NavBar
         data-test="main-header"
         leftButton={
-          <Button type="button">
+          <Button type="button" onClick={() => setSlideMenuVisible(true)}>
             <Caret direction="left" />
           </Button>
         }
