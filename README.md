@@ -1,8 +1,9 @@
 <div id="top"></div>
 
 <div align='center'>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+    <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=blue"/>
+    <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=Next.js&logoColor=white"/>
 </div>
 
 <br />
@@ -10,7 +11,6 @@
 <div align="center">
   <h3 align="center">3주차 과제 - 더블엔씨</h3>
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">Best-README-Template</a>을 참고하여 만들어 본 README 템플릿입니다. 확인하시고 의견 주시면 감사하겠습니다!
     <br />
     <br />
     <a href="https://ncnc-wanted.herokuapp.com/"><strong>배포 링크</strong></a>
@@ -55,10 +55,10 @@
     <td align="center"><b>김재원</b></td>
   </tr>
   <tr>
-    <td align="center"><b>FE Developer</b></td>
-    <td align="center"><b>FE Developer</b></td>
-    <td align="center"><b>FE Developer</b></td>
-    <td align="center"><b>FE Developer</b></td>
+    <td align="center"><b>페이지 로그아웃 & Q&A 페이지</b></td>
+    <td align="center"><b>커피 구매 페이지</b></td>
+    <td align="center"><b>카페 브랜드 & 아이템 리스트</b></td>
+    <td align="center"><b>메인 페이지</b></td>
   </tr>
 </table>
 
@@ -88,15 +88,15 @@
 
 구현한 기능 목록을 작성할 영역입니다.
 
-- [x] 기능 1
 
-- [x] 기능 2
-  - [x] 세부기능 2-1
-  - [x] 세부기능 2-2
-
-- [x] 기능 3
-  - [x] 세부기능 3-1
-  - [x] 세부기능 3-2
+- [x]  Next.js 와 TypeScript 를 사용
+- [x]  배너 캐러셀은 공개된 라이브러리를 사용하지 않고 직접 구현
+- [x]  기본 Next.js ESlint 룰을 적용
+- [x]  API 데이터 패칭
+- [x]  메뉴 슬라이더 적용
+- [x]  슬라이딩 사이드바 배치
+- [x]  아코디언 적용
+- [x]  요구 조건에 맞는 라우팅 처리
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -121,7 +121,7 @@
 1. Repository를 clone한다.
 
   ```sh
-  git clone https://github.com/gml9812/wanted-frontend-pre-on-boarding-mission.git
+  git clone https://github.com/team-tyranno/wanted-doublenc.git
   ```
 
 2. NPM Package들을 설치한다.
@@ -147,14 +147,34 @@
 프로젝트 구조를 작성할 영역입니다. (Optional)
 
 ```bash
-├── public
-│   ├── index.html
-├── src
-│   ├── components
-│   ├── hooks
-│   ├── constants
-│   └── utils
-└── some_more_file.xxx
+wanted-doublenc
+ ┣ cypress // E2E 테스트 코드를 담은 코드입니다.
+ ┃
+ ┣ public // 전역에서 사용할 리소스를 담은 페이지 입니다.
+ ┃ 
+ ┣ src
+ ┃ ┣ commons // 공통적으로 사용될 코드입니다.
+ ┃ ┃ 
+ ┃ ┣ components // 컴포넌트는 아토믹 디자인 패턴 기반으로 구성되었습니다.
+ ┃ ┃ ┣ atoms
+ ┃ ┃ ┃ 
+ ┃ ┃ ┣ molecules
+ ┃ ┃ ┃
+ ┃ ┃ ┣ organisms
+ ┃ ┃ ┃ 
+ ┃ ┃ ┣ templates
+ ┃ ┃ ┃ 
+ ┃ ┃ ┗ index.ts
+ ┃ ┣ hooks // 커스텀 hooks
+ ┃ ┃
+ ┃ ┣ pages // 라우팅을 위한 페이지입니다.
+ ┃ ┃
+ ┃ ┣ styles // 여러 공통스타일 모듈입니다.
+ ┃ ┃
+ ┃ ┣ types // 여러 페이지에 걸쳐 사용될 타입 입니다.
+ ┃ ┃
+ ┃ ┗ utils //
+ ┣ README.md
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
