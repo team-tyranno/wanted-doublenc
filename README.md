@@ -68,15 +68,8 @@
 
 ## 과제 소개
 
-간략한 과제 소개 및 jpg, gif가 들어갈 영역입니다.
+![ezgif-7-9286e9a9f5](https://user-images.githubusercontent.com/60822846/154182243-948f6c5b-145d-4d5c-a6b0-b0c5432c4be9.gif)
 
-- 과제 소개 1
-
-![slider](https://user-images.githubusercontent.com/28294925/150082839-44f592e6-bdaa-4081-9281-12075b2c60d0.gif)
-
-- 과제 소개 2
-
-![responsive](https://user-images.githubusercontent.com/28294925/150082899-efbb1c3d-fd02-4134-8948-05d14bcb28de.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
