@@ -4,7 +4,14 @@ import styled from 'styled-components';
 
 import { getCategoryList, getItemList } from 'utils';
 import { ICategoryDetailProps, IMenuProps } from 'types';
-import { SlideMenu, NavBar, Caret, MainCategory, MainDiscount, MainFooter } from 'components';
+import {
+  SlideMenu,
+  NavBar,
+  MainCarousel,
+  MainCategory,
+  MainDiscount,
+  MainFooter,
+} from 'components';
 
 export const Button = styled.button`
   display: flex;
@@ -46,11 +53,7 @@ const Home: NextPage = ({
         }
         title="니콘내콘"
       />
-
-      <section data-test="main-carousel">
-        <img alt="" src="/images/main-carousel-1.png" style={{ height: '141px' }} />
-      </section>
-
+      <MainCarousel data-test="main-carousel" />
       <MainCategory data-test="main-category" categoryList={categoryList} />
       <MainDiscount data-test="main-discount" itemList={itemList} />
       <MainFooter data-test="main-footer" />

@@ -12,6 +12,7 @@ export { Pencil } from 'components/atoms/Pencil';
 // Molecules
 export { Accordion } from 'components/molecules/Accordion';
 export { BrandLists } from 'components/molecules/BrandLists';
+export { CarouselCard } from 'components/molecules/CarouselCard';
 export { ItemLists } from 'components/molecules/ItemLists';
 
 // Organisms
@@ -19,6 +20,7 @@ export { CustomerServiceInfo } from 'components/organisms/CustomerServiceInfo';
 export { Faq } from 'components/organisms/Faq';
 export { ItemButton } from 'components/organisms/ItemButton';
 export { ItemWarning } from 'components/organisms/ItemWarning';
+export { MainCarousel } from 'components/organisms/MainCarousel';
 export { MainCategory } from 'components/organisms/MainCategory';
 export { MainDiscount } from 'components/organisms/MainDiscount';
 export { MainFooter } from 'components/organisms/MainFooter';
