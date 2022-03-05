@@ -42,7 +42,11 @@ const Home = ({
       <NavBar
         data-test="main-header"
         leftButton={
-          <Button type="button" onClick={() => setSlideMenuVisible(true)}>
+          <Button
+            type="button"
+            onClick={() => setSlideMenuVisible(true)}
+            data-cy="hamburgerMenuButton"
+          >
             <img
               alt=""
               src="/images/hamburgerMenu.png"

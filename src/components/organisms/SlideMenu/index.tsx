@@ -10,7 +10,7 @@ interface SlideMenuProps {
 export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
   const router = useRouter();
   return (
-    <S.Container visible={visible}>
+    <S.Container visible={visible} data-cy="slideMenu">
       <NavBar
         leftButton={
           <S.Button type="button" onClick={() => onClick(!visible)}>
@@ -21,7 +21,11 @@ export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
       />
       <S.Wrapper>
         <ContentsDivider />
-        <S.Button type="button" onClick={() => router.push('/contacts')}>
+        <S.Button
+          type="button"
+          onClick={() => router.push('/contacts')}
+          data-cy="customerServiceButton"
+        >
           <S.ButtonDescription>고객센터</S.ButtonDescription>
           <Caret direction="right" />
         </S.Button>

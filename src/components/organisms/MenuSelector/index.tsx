@@ -55,7 +55,12 @@ export const MenuSelector = ({ title = '', menuList, selected, onClick }: IMenuS
         ref={slideRef}
       >
         {menuList.map((menu) => (
-          <S.Button key={menu.id} underLine={menu.id === selected} onClick={() => onClick(menu.id)}>
+          <S.Button
+            key={menu.id}
+            underLine={menu.id === selected}
+            onClick={() => onClick(menu.id)}
+            data-cy="menuButton"
+          >
             {menu.name}
           </S.Button>
         ))}

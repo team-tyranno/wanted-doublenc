@@ -62,7 +62,6 @@ export async function getStaticProps({ params }: { params: IPathProps }) {
 
 export async function getStaticPaths() {
   const paths = await getCategoryPath();
-  console.log(paths);
 
   return {
     paths,
