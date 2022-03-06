@@ -44,7 +44,7 @@ export const MainFooter = () => {
         <h5>(주) 더블엔씨</h5>
         <Caret direction={isFooterInfoShown ? 'up' : 'down'} />
       </button>
-      <p data-test="footer-info" className={isFooterInfoShown ? '' : 'hide'}>
+      <p data-test="footer-info" className={isFooterInfoShown ? '' : 'hide'} data-cy="footerInfo">
         대표 : 박진희 <span>|</span> 이메일 : cs@doublenc.com
         <br />
         사업자 등록번호 : 290-86-00970

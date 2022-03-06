@@ -21,11 +21,7 @@ export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
       />
       <S.Wrapper>
         <ContentsDivider />
-        <S.Button
-          type="button"
-          onClick={() => router.push('/contacts')}
-          data-cy="customerServiceButton"
-        >
+        <S.Button type="button" onClick={() => router.push('/contacts')}>
           <S.ButtonDescription>고객센터</S.ButtonDescription>
           <Caret direction="right" />
         </S.Button>

@@ -26,7 +26,7 @@ export const Faq = ({ qaList }: IFaqProps) => {
 
   return (
     <S.Container>
-      <S.QaWrap>
+      <S.QaWrap data-cy="qa">
         {qaList !== undefined &&
           qaList.map((qa) => (
             <Accordion
