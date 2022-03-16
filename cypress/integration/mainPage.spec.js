@@ -12,9 +12,9 @@ describe('메인 페이지 테스트', () => {
   });
 
   it('"오늘의 땡처리콘" 메뉴에 위치한 제품 클릭 시 제품 페이지로 이동한다.', () => {
-    cy.contains('샤롯데 2인 관람권').click();
-    cy.location('pathname').should('equal', '/items/8368');
-    cy.contains('샤롯데 2인 관람권').should('exist');
+    cy.contains('윈터 원더 초코딸기 케이크(홀)').click();
+    cy.location('pathname').should('equal', '/items/9356');
+    cy.contains('윈터 원더 초코딸기 케이크(홀)').should('exist');
   });
 
   it('footer의 "(주) 더블엔씨" 버튼 클릭 시 회사 정보 및 연락처가 표시된다.', () => {

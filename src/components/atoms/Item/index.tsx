@@ -14,7 +14,7 @@ export const Item = ({ data }: { data: IMenuProps }) => {
   const onClick = () => router.push({ pathname: `/items/${id}` });
 
   return (
-    <S.Container onClick={onClick}>
+    <S.Container onClick={onClick} data-cy="item">
       <img src={imageUrl} alt={`${name} 이미지`} />
       <S.Inner>
         <div className="title">{name}</div>

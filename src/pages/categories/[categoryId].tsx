@@ -43,7 +43,7 @@ const CategoryId = ({ datas, menus }: { datas: ICafeProps; menus: Array<IMenuPro
         title={name}
       />
       <MenuSelector menuList={parseMenu} selected={selected} onClick={onClick} />
-      <BrandLists query={id.toString()} datas={conCategory2s} />
+      <BrandLists query={id.toString()} datas={conCategory2s} data-cy="brandLists" />
     </>
   );
 };

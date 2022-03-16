@@ -1,6 +1,6 @@
 {
   "baseUrl": "http://127.0.0.1:3000",
-  "testFiles": ["faq.spec.js", "mainPage.spec.js"],
+  "testFiles": ["faq.spec.js", "mainPage.spec.js", "itemPage.spec.js"],
   "env": {
     "cypress-react-selector": {
       "root": "#root"
