@@ -12,14 +12,14 @@ interface IAccordionProps {
 
 export const Accordion = ({ question, answer, isOpen, onClick, id }: IAccordionProps) => {
   return (
-    <S.Container>
+    <S.Container data-cy="accordion">
       <S.FAQ type="button" onClick={() => onClick(id)}>
         <S.QMark>Q.</S.QMark>
         <S.Question>{question}</S.Question>
         <Caret direction={isOpen ? 'up' : 'down'} />
       </S.FAQ>
       {isOpen && (
-        <S.AnswerBox>
+        <S.AnswerBox data-cy="accordionAnswer">
           <S.AnswerWrap>
             <p>{answer}</p>
           </S.AnswerWrap>

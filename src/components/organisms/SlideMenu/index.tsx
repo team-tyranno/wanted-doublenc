@@ -10,7 +10,7 @@ interface SlideMenuProps {
 export const SlideMenu = ({ visible, onClick }: SlideMenuProps) => {
   const router = useRouter();
   return (
-    <S.Container visible={visible}>
+    <S.Container visible={visible} data-cy="slideMenu">
       <NavBar
         leftButton={
           <S.Button type="button" onClick={() => onClick(!visible)}>

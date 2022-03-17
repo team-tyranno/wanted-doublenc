@@ -64,7 +64,7 @@ const Contacts = ({ qaTypes, qaLists }: IContactsProps) => {
           </Button>
         }
       />
-      <Container>
+      <Container data-cy="customerService">
         <CustomerServiceInfo />
         <ContentsDivider />
         <MenuSelector
