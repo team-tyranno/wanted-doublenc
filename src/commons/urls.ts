@@ -2,7 +2,7 @@ const CON_CATEGORYS = 'https://api2.ncnc.app/con-category1s';
 
 const CON_ITEMS = 'https://api2.ncnc.app/con-items/soon';
 
-const BRAND_LISTS = 'https://api2.ncnc.app/con-category1s/67/nested';
+const BRAND_LISTS = (id: number) => `https://api2.ncnc.app/con-category1s/${id}/nested`;
 
 const ITEM_DETAIL = (id: string) => `https://api2.ncnc.app/con-items/${id}`;
 

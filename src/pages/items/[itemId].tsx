@@ -57,11 +57,6 @@ interface Option {
   sellingPrice: number;
 }
 
-// interface IItemsProps {
-//   id: string;
-//   data: ConItem;
-// }
-
 interface IParams {
   params: {
     itemId: string;
@@ -123,7 +118,6 @@ export async function getServerSideProps({ params }: IParams) {
 
   return {
     props: {
-      // id: conItemId,
       data: conItemData.conItem,
     },
   };
