@@ -120,8 +120,6 @@ export async function getServerSideProps({ params }: IParams) {
   const conItemResult = await axios.get(`${API_END_POINT.CON_ITEMS}${conItemId}`);
   const conItemData = conItemResult.data;
 
-  console.log(conItemData);
-
   return {
     props: {
       data: conItemData.conItem,
