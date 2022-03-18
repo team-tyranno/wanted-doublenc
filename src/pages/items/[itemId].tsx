@@ -49,6 +49,7 @@ interface ConItem {
 interface ConCategory2 {
   id: number;
   name: string;
+  info: string;
 }
 
 interface Option {
@@ -100,6 +101,9 @@ const Items = ({ data }: { data: ConItem }) => {
       />
       <ItemInfo data={itemInfoData} />
       <Body>
+        {data.conCategory2.info && (
+          <ItemWarning key={nanoid()} title="브랜드 유의사항" content={data.conCategory2.info} />
+        )}
         {data.warning &&
           Array.from(Array(titles.length).keys()).map((n) => (
             <ItemWarning key={nanoid()} title={titles[n]} content={contents[n]} />
@@ -115,6 +119,8 @@ export async function getServerSideProps({ params }: IParams) {
   const conItemId = params.itemId;
   const conItemResult = await axios.get(`${API_END_POINT.CON_ITEMS}${conItemId}`);
   const conItemData = conItemResult.data;
+
+  console.log(conItemData);
 
   return {
     props: {
