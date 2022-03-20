@@ -32,13 +32,13 @@ export async function getItemList() {
 }
 
 export async function getCategoryPath() {
-  const parsedDatas: Array<ICafeProps> = await getParseObject(BRAND_LISTS);
+  const parsedDatas: Array<Array<ICafeProps>> = await getParseObject(CON_CATEGORYS);
 
-  return parsedDatas.map((parsedData) => ({ params: { categoryId: parsedData.id.toString() } }));
+  return parsedDatas[0].map((parsedData) => ({ params: { categoryId: parsedData.id.toString() } }));
 }
 
 export async function getCategotyData(id: number) {
-  const parsedDatas: Array<ICafeProps> = await getParseObject(BRAND_LISTS);
+  const parsedDatas: Array<ICafeProps> = await getParseObject(BRAND_LISTS(id));
 
   return parsedDatas.find((parsedData) => {
     return parsedData.id === Number(id);

@@ -27,7 +27,8 @@ const CategoryId = ({ datas, menus }: { datas: ICafeProps; menus: Array<IMenuPro
   const [selected, setIsSelected] = useState<number>(id);
 
   const onClick = (key: number) => {
-    router.push(`/categories/${id}`);
+    router.push(`/categories/${key}`);
+    console.log('aya');
     setIsSelected(key);
   };
 

@@ -49,6 +49,7 @@ interface ConItem {
 interface ConCategory2 {
   id: number;
   name: string;
+  info: string;
 }
 
 interface Option {
@@ -56,11 +57,6 @@ interface Option {
   count: number;
   sellingPrice: number;
 }
-
-// interface IItemsProps {
-//   id: string;
-//   data: ConItem;
-// }
 
 interface IParams {
   params: {
@@ -105,6 +101,9 @@ const Items = ({ data }: { data: ConItem }) => {
       />
       <ItemInfo data={itemInfoData} />
       <Body>
+        {data.conCategory2.info && (
+          <ItemWarning key={nanoid()} title="브랜드 유의사항" content={data.conCategory2.info} />
+        )}
         {data.warning &&
           Array.from(Array(titles.length).keys()).map((n) => (
             <ItemWarning key={nanoid()} title={titles[n]} content={contents[n]} />
@@ -123,7 +122,6 @@ export async function getServerSideProps({ params }: IParams) {
 
   return {
     props: {
-      // id: conItemId,
       data: conItemData.conItem,
     },
   };

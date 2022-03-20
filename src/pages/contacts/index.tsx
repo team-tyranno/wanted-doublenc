@@ -82,7 +82,6 @@ const Contacts = ({ qaTypes, qaLists }: IContactsProps) => {
 
 export default Contacts;
 
-// 에러처리
 export const getStaticProps = async () => {
   const qaTypesResult = await axios.get(API_END_POINT.QA_TYPES);
   const qaTypesData = qaTypesResult.data.qaTypes.map((qaType: Qa) => ({
