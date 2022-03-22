@@ -55,7 +55,7 @@
     <td align="center"><b>김재원</b></td>
   </tr>
   <tr>
-    <td align="center"><b>페이지 로그아웃 & Q&A 페이지</b></td>
+    <td align="center"><b>Q&A 페이지 구현, E2E 테스트 적용 </b></td>
     <td align="center"><b>커피 구매 페이지</b></td>
     <td align="center"><b>카페 브랜드 & 아이템 리스트</b></td>
     <td align="center"><b>메인 페이지</b></td>
@@ -78,18 +78,22 @@
 <br>
 
 ## 구현한 기능
-
-구현한 기능 목록을 작성할 영역입니다.
-
-
-- [x]  Next.js 와 TypeScript 를 사용
-- [x]  배너 캐러셀은 공개된 라이브러리를 사용하지 않고 직접 구현
-- [x]  기본 Next.js ESlint 룰을 적용
-- [x]  API 데이터 패칭
-- [x]  메뉴 슬라이더 적용
-- [x]  슬라이딩 사이드바 배치
-- [x]  아코디언 적용
-- [x]  요구 조건에 맞는 라우팅 처리
+- [x] 메인 페이지
+  - [x] 광고 캐러셀 
+  - [x] 카테고리 리스트
+  - [x] 땡처리콘 리스트
+  - [x] 슬라이드 메뉴
+- [x] 카테고리 페이지
+  - [x] 마우스 드래그 가능한 상단 네비게이션 바
+  - [x] 선택된 카테고리에 해당하는 브랜드 리스트
+- [x] 브랜드 페이지
+  - [x] 할인율과 가격이 표시된 제품 리스트
+- [x] 제품 페이지
+  - [x] '옵션 선택하기' 클릭 시 옵션 리스트 생성
+  - [x] 옵션 선택 시 '구매하기' 버튼 생성
+- [x] Q&A 페이지
+  - [x] 구매/판매 버튼 선택 시 해당하는 질문 리스트 표시
+  - [x] 질문 클릭 시 해당하는 답변 표시
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -98,8 +102,6 @@
 <br>
 
 ## 설치 및 실행
-
-배포 링크가 동작하지 않을 시, local에서 프로젝트를 실행하는 방법을 작성할 영역입니다.
 
 ### Prerequisites
 
@@ -126,7 +128,7 @@
 3. Localhost 환경에서 프로젝트를 실행한다.
 
   ```sh
-  npm start
+  npm run dev
   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -137,18 +139,16 @@
 
 ## 프로젝트 구조
 
-프로젝트 구조를 작성할 영역입니다. (Optional)
-
 ```bash
 wanted-doublenc
- ┣ cypress // E2E 테스트 코드를 담은 코드입니다.
+ ┣ cypress // E2E 테스트 코드
  ┃
- ┣ public // 전역에서 사용할 리소스를 담은 페이지 입니다.
+ ┣ public // 전역에서 사용할 리소스
  ┃ 
  ┣ src
- ┃ ┣ commons // 공통적으로 사용될 코드입니다.
+ ┃ ┣ commons // 상수
  ┃ ┃ 
- ┃ ┣ components // 컴포넌트는 아토믹 디자인 패턴 기반으로 구성되었습니다.
+ ┃ ┣ components // 아토믹 디자인 패턴 기반으로 구성된 컴포넌트
  ┃ ┃ ┣ atoms
  ┃ ┃ ┃ 
  ┃ ┃ ┣ molecules
@@ -160,13 +160,13 @@ wanted-doublenc
  ┃ ┃ ┗ index.ts
  ┃ ┣ hooks // 커스텀 hooks
  ┃ ┃
- ┃ ┣ pages // 라우팅을 위한 페이지입니다.
+ ┃ ┣ pages
  ┃ ┃
- ┃ ┣ styles // 여러 공통스타일 모듈입니다.
+ ┃ ┣ styles // 공통 스타일 모듈
  ┃ ┃
- ┃ ┣ types // 여러 페이지에 걸쳐 사용될 타입 입니다.
+ ┃ ┣ types // Typescript 인터페이스
  ┃ ┃
- ┃ ┗ utils //
+ ┃ ┗ utils // 유틸 함수
  ┣ README.md
 ```
 
