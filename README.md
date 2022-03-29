@@ -178,8 +178,6 @@ wanted-doublenc
 
 ## License
 
-라이센스를 표시할 영역입니다.
-
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
